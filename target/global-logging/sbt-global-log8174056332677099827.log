@@ -1,0 +1,175 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, None, None)[0m
+[0m[[0m[33mwarn[0m] [0m[0mbuild source files have changed[0m
+[0m[[0m[33mwarn[0m] [0m[0mmodified files: [0m
+[0m[[0m[33mwarn[0m] [0m[0m  /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/build.sbt[0m
+[0m[[0m[33mwarn[0m] [0m[0mApply these changes by running `reload`.[0m
+[0m[[0m[33mwarn[0m] [0m[0mAutomatically reload the build when source changes are detected by setting `Global / onChangedBuildSource := ReloadOnSourceChanges`.[0m
+[0m[[0m[33mwarn[0m] [0m[0mDisable this warning by setting `Global / onChangedBuildSource := IgnoreSourceChanges`.[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources and 1 Java source to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/views/welcome.scala.html:75:26: value AsyncController is not a member of object controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m        <a href="@routes.AsyncController.message">Click here for the AsyncController action!</a>[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/views/welcome.scala.html:89:26: value CountController is not a member of object controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m        <a href="@routes.CountController.count">Click here for the CountController action!</a>[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources and 1 Java source to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/views/welcome.scala.html:83:26: value CountController is not a member of object controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m        <a href="@routes.CountController.count">Click here for the CountController action!</a>[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources and 1 Java source to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/views/welcome.scala.html:83:26: value CountController is not a member of object controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m        <a href="@routes.CountController.count">Click here for the CountController action!</a>[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources and 1 Java source to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-scala-starter-example[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:11:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:24:36: not found: type WSClient[0m
+[0m[[0m[31merror[0m] [0m[0mclass HomeController @Inject()(ws: WSClient, cc: ControllerComponents) (implicit assetsFinder: AssetsFinder)[0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:24:36: not found: type WSClient[0m
+[0m[[0m[31merror[0m] [0m[0mclass HomeController @Inject()(ws: WSClient, cc: ControllerComponents) (implicit assetsFinder: AssetsFinder)[0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-scala-starter-example[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-scala-starter-example[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-scala-starter-example[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:11:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:24:62: not found: type WSClient[0m
+[0m[[0m[31merror[0m] [0m[0mclass HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends AbstractController(cc) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:117:18: not found: type WSRequest[0m
+[0m[[0m[31merror[0m] [0m[0m    val request: WSRequest = ws.url("https://app.clearscore.com/api/global/backend-tech-test/v1/cards")[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:131:18: not found: type WSRequest[0m
+[0m[[0m[31merror[0m] [0m[0m    val request: WSRequest = ws.url ("https://app.clearscore.com/api/global/backend-tech-test/v2/creditcards")[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:8:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:25:62: not found: type WSClient[0m
+[0m[[0m[31merror[0m] [0m[0mclass HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends AbstractController(cc) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:118:18: not found: type WSRequest[0m
+[0m[[0m[31merror[0m] [0m[0m    val request: WSRequest = ws.url("https://app.clearscore.com/api/global/backend-tech-test/v1/cards")[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:132:18: not found: type WSRequest[0m
+[0m[[0m[31merror[0m] [0m[0m    val request: WSRequest = ws.url ("https://app.clearscore.com/api/global/backend-tech-test/v2/creditcards")[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:8:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:9:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:26:62: not found: type WSClient[0m
+[0m[[0m[31merror[0m] [0m[0mclass HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends AbstractController(cc) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:119:18: not found: type WSRequest[0m
+[0m[[0m[31merror[0m] [0m[0m    val request: WSRequest = ws.url("https://app.clearscore.com/api/global/backend-tech-test/v1/cards")[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:133:18: not found: type WSRequest[0m
+[0m[[0m[31merror[0m] [0m[0m    val request: WSRequest = ws.url ("https://app.clearscore.com/api/global/backend-tech-test/v2/creditcards")[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:8:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:9:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:26:62: not found: type WSClient[0m
+[0m[[0m[31merror[0m] [0m[0mclass HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends AbstractController(cc) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:8:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:9:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/elvis.sebatane/Desktop/play-samples-play-scala-starter-example/app/controllers/HomeController.scala:26:62: not found: type WSClient[0m
+[0m[[0m[31merror[0m] [0m[0mclass HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends AbstractController(cc) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
