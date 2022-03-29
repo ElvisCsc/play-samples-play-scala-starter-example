@@ -1,8 +1,7 @@
 package controllers
 
-
-
-import play.api.libs.json.JsValue.jsValueToJsLookup
+import play.api.libs.json.Format.GenericFormat
+import play.api.libs.json.OFormat.oFormatFromReadsAndOWrites
 import play.api.libs.json.{JsValue, Json}
 
 import javax.inject._
@@ -27,43 +26,40 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index = Action {
-    var pp = Json.arr("""[{"approvalRating":0.8,"apr":19.4,"card":"ScoredCard Builder"}]""")
-
-    Ok(pp)
-  }
 
   def savee = Action(parse.json) { request =>
     val content = request.body.as[CreditScoreRequest]
 
-    var myList: List[CreditScoreRequest] = List()
-    myList = myList :+ content
-
-    var response = Json.toJson(myList)
-
-
     val cs = cSCards(content.name, content.creditScore).map( res => {
       var listObj = res.as[List[CsCard]]
       listObj.map(card => {
-        card.copy(name = Option(card.cardName), cardScore = Option(sortingScore(card.apr, card.eligibility)))
+        card.copy(provider = Option("CSCard"), name = Option(card.cardName), cardScore = Option(sortingScore(card.apr, card.eligibility)))
       })
     })
-
 
    val sc = scoredCards(content.name, content.creditScore, content.salary).map( res => {
      var listObj = res.as[List[ScoredCard]]
      listObj.map(scard => {
-       scard.copy(name = Option(scard.card), cardScore = Option(sortingScore(scard.apr, scard.approvalRating)))
+       scard.copy(provider = Option("ScoredCards"), name = Option(scard.card), cardScore = Option(sortingScore(scard.apr, scard.approvalRating)))
      })
    })
-    var answer = Await.result(cs, Duration.Inf)
-    var answer2 = Await.result(sc, Duration.Inf)
+    val answer = Await.result(cs, Duration.Inf)
+    val answer2 = Await.result(sc, Duration.Inf)
 
-    // A1 :: A2
-    //println(answer)
-    Ok(Json.toJson(answer2))
+    var response : List[CreditCard] = Json.toJson(answer2).as[List[CreditCard]] ::: Json.toJson(answer).as[List[CreditCard]]
+    val sortedResponse = response.sortBy(_.cardScore)
+    Ok(Json.toJson(sortedResponse))
   }
 
+  /**
+   * The first partner provides a JSON API to get eligible cards.
+   * They’re only interested in a users full name and credit score to make their decisions.
+   * The response is a list of cards, including an eligibility rating from 0.0 to 10.0.
+   *
+   * @param name
+   * @param creditScore
+   * @return Future
+   */
   def cSCards(name: String, creditScore: Int):  Future[JsValue] =  {
     val data = Json.obj(
       "name" -> name,
@@ -76,6 +72,11 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
     request
   }
 
+
+  /**
+   * Our other partner uses all the users information to make their scoring decisions.
+   * The eligibility rating is provided in the approvalRating field and is on a scale from 0.0 to 1.0.
+   */
   def scoredCards(name: String, creditScore: Int, salary: Double): Future[JsValue] = {
 
     val data = Json.obj(
@@ -92,36 +93,11 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
     response
   }
 
+  /**
+   * calculates sortingScore
+   */
   def sortingScore(apr: Double, eligibility: Double): Double = {
     BigDecimal(eligibility/ (apr * apr)).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble
   }
 
 }
-
-
-/*
-      val hello = Action.async(parse.anyContent) { request =>
-ws.url(request.getQueryString("url").get).get().map { r =>
-  if (r.status == 200) Ok("The website is up") else NotFound("The website is down")
-}
-}
-   */
-
-/*
-    import scala.concurrent.duration._
-import play.api.libs.concurrent.Futures._
-
-def index = Action.async {
-  // You will need an implicit Futures for withTimeout() -- you usually get
-  // that by injecting it into your controller's constructor
-  intensiveComputation()
-    .withTimeout(1.seconds)
-    .map { i =>
-      Ok("Got result: " + i)
-    }
-    .recover {
-      case e: scala.concurrent.TimeoutException =>
-        InternalServerError("timeout")
-    }
-}
- */
