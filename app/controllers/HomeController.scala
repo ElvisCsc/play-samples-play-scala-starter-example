@@ -67,7 +67,14 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
     )
 
     val request = ws.url("https://app.clearscore.com/api/global/backend-tech-test/v1/cards").withRequestTimeout(10000.millis).post(data).map(res => {
-     res.json
+      if (res.status == 408){
+        NotFound("InternalServerError: TimeoutException")
+      }
+
+      if (res.status == 500){
+        NotFound("InternalServerError: End point not working")
+      }
+      res.json
     })
     request
   }
@@ -87,6 +94,12 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
     val request = ws.url ("https://app.clearscore.com/api/global/backend-tech-test/v2/creditcards")
 
     var response = request.post(data).map( request => {
+      if (request.status == 408){
+        NotFound("InternalServerError: TimeoutException")
+      }
+      if (request.status == 500){
+        NotFound("InternalServerError: End point not working")
+      }
       request.json
     })
 

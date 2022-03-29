@@ -2428,3 +2428,19 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[value index is n
     filters.ExampleFilter
 
 2022-03-30 00:37:50,823 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-332 - Application started (Dev) (no global state)
+2022-03-30 00:50:32,656 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-334 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2022-03-30 00:50:32,659 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-334 - Application started (Dev) (no global state)
+2022-03-30 00:53:36,880 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-351 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2022-03-30 00:53:36,882 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-351 - Application started (Dev) (no global state)
