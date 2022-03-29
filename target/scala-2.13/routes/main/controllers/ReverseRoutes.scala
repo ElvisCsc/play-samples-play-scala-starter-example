@@ -6,24 +6,18 @@ import play.api.mvc.Call
 
 import _root_.controllers.Assets.Asset
 
-// @LINE:6
+// @LINE:7
 package controllers {
 
-  // @LINE:6
+  // @LINE:7
   class ReverseHomeController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:6
-    def index: Call = {
-      
-      Call("GET", _prefix)
-    }
-  
-    // @LINE:8
-    def savee: Call = {
+    // @LINE:7
+    def creditcards: Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "creditcards")
     }

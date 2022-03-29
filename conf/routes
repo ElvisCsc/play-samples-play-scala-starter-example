@@ -3,6 +3,5 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
 
-GET     /creditcards                    controllers.HomeController.savee
+GET     /creditcards                    controllers.HomeController.creditcards

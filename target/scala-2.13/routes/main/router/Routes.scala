@@ -12,14 +12,14 @@ import _root_.controllers.Assets.Asset
 
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
-  // @LINE:6
+  // @LINE:7
   HomeController_0: controllers.HomeController,
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
-    // @LINE:6
+    // @LINE:7
     HomeController_0: controllers.HomeController
   ) = this(errorHandler, HomeController_0, "/")
 
@@ -34,8 +34,7 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """creditcards""", """controllers.HomeController.savee"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """creditcards""", """controllers.HomeController.creditcards"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -43,34 +42,16 @@ class Routes(
   }}
 
 
-  // @LINE:6
-  private[this] lazy val controllers_HomeController_index0_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix)))
-  )
-  private[this] lazy val controllers_HomeController_index0_invoker = createInvoker(
-    HomeController_0.index,
-    play.api.routing.HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.HomeController",
-      "index",
-      Nil,
-      "GET",
-      this.prefix + """""",
-      """ An example controller showing a sample home page""",
-      Seq()
-    )
-  )
-
-  // @LINE:8
-  private[this] lazy val controllers_HomeController_savee1_route = Route("GET",
+  // @LINE:7
+  private[this] lazy val controllers_HomeController_creditcards0_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("creditcards")))
   )
-  private[this] lazy val controllers_HomeController_savee1_invoker = createInvoker(
-    HomeController_0.savee,
+  private[this] lazy val controllers_HomeController_creditcards0_invoker = createInvoker(
+    HomeController_0.creditcards,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "savee",
+      "creditcards",
       Nil,
       "GET",
       this.prefix + """creditcards""",
@@ -82,16 +63,10 @@ class Routes(
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
-    // @LINE:6
-    case controllers_HomeController_index0_route(params@_) =>
+    // @LINE:7
+    case controllers_HomeController_creditcards0_route(params@_) =>
       call { 
-        controllers_HomeController_index0_invoker.call(HomeController_0.index)
-      }
-  
-    // @LINE:8
-    case controllers_HomeController_savee1_route(params@_) =>
-      call { 
-        controllers_HomeController_savee1_invoker.call(HomeController_0.savee)
+        controllers_HomeController_creditcards0_invoker.call(HomeController_0.creditcards)
       }
   }
 }

@@ -27,7 +27,7 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
    * a path of `/`.
    */
 
-  def savee = Action(parse.json) { request =>
+  def creditcards  = Action(parse.json) { request =>
     val content = request.body.as[CreditScoreRequest]
 
     val cs = cSCards(content.name, content.creditScore).map( res => {

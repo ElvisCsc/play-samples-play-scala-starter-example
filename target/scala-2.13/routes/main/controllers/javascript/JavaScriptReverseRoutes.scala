@@ -6,10 +6,10 @@ import play.api.routing.JavaScriptReverseRoute
 
 import _root_.controllers.Assets.Asset
 
-// @LINE:6
+// @LINE:7
 package controllers.javascript {
 
-  // @LINE:6
+  // @LINE:7
   class ReverseHomeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -17,19 +17,9 @@ package controllers.javascript {
     }
 
   
-    // @LINE:6
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
-        }
-      """
-    )
-  
-    // @LINE:8
-    def savee: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.savee",
+    // @LINE:7
+    def creditcards: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.creditcards",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "creditcards"})
