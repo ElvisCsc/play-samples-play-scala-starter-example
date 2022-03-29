@@ -30,8 +30,6 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
   def index = Action {
     var pp = Json.arr("""[{"approvalRating":0.8,"apr":19.4,"card":"ScoredCard Builder"}]""")
 
-
-
     Ok(pp)
   }
 
@@ -44,14 +42,18 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
     var response = Json.toJson(myList)
 
 
-    val cs = cSCards(content.name, content.creditScore).map( res =>{
-
+    val cs = cSCards(content.name, content.creditScore).map( res => {
       var listObj = res.as[List[CsCard]]
-      listObj.map(card => card.copy(age = Option(100)))
+      println(listObj)
+      listObj.map(card => {
+        card.copy(name = Option(card.cardName), cardScore = Option(sortingScore(card.apr, card.eligibility)))
+      })
     })
 
 
-   // scoredCards(content.name, content.creditScore, content.salary)
+   val sc = scoredCards(content.name, content.creditScore, content.salary).map( res => {
+
+   })
    var answer = Await.result(cs, Duration.Inf)
 
     println("dhfshgsiogoijio")
@@ -61,37 +63,35 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
   }
 
   def cSCards(name: String, creditScore: Int):  Future[JsValue] =  {
-    println("CsCardggggs")
     val data = Json.obj(
       "name" -> name,
       "creditScore" -> creditScore
     )
 
-
-
     val request = ws.url("https://app.clearscore.com/api/global/backend-tech-test/v1/cards").withRequestTimeout(10000.millis).post(data).map(res => {
-      //if (res.status == 409)
-         // throw time
      res.json
     })
     request
   }
 
-  def scoredCards(name: String, creditScore: Int, salary: Double): Unit = {
-    println("ScoredCards")
-    val request = ws.url ("https://app.clearscore.com/api/global/backend-tech-test/v2/creditcards")
+  def scoredCards(name: String, creditScore: Int, salary: Double): Future[JsValue] = {
+
     val data = Json.obj(
       "name" -> name,
       "score" -> creditScore,
       "salary" -> salary
     )
-    var reponse = request.post(data).map( request => {
-      println(request.body)
+    val request = ws.url ("https://app.clearscore.com/api/global/backend-tech-test/v2/creditcards")
+
+    var response = request.post(data).map( request => {
+      request.json
     })
+
+    response
   }
 
   def sortingScore(apr: Double, eligibility: Double): Double = {
-    eligibility/ (apr * apr)
+    BigDecimal(eligibility/ (apr * apr)).setScale(3, BigDecimal.RoundingMode.HALF_UP).toDouble
   }
 
 }
