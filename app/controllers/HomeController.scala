@@ -44,7 +44,6 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
 
     val cs = cSCards(content.name, content.creditScore).map( res => {
       var listObj = res.as[List[CsCard]]
-      println(listObj)
       listObj.map(card => {
         card.copy(name = Option(card.cardName), cardScore = Option(sortingScore(card.apr, card.eligibility)))
       })
@@ -52,14 +51,17 @@ class HomeController @Inject()(cc: ControllerComponents, ws: WSClient) extends A
 
 
    val sc = scoredCards(content.name, content.creditScore, content.salary).map( res => {
-
+     var listObj = res.as[List[ScoredCard]]
+     listObj.map(scard => {
+       scard.copy(name = Option(scard.card), cardScore = Option(sortingScore(scard.apr, scard.approvalRating)))
+     })
    })
-   var answer = Await.result(cs, Duration.Inf)
+    var answer = Await.result(cs, Duration.Inf)
+    var answer2 = Await.result(sc, Duration.Inf)
 
-    println("dhfshgsiogoijio")
     // A1 :: A2
-    println(answer)
-    Ok(Json.toJson(answer))
+    //println(answer)
+    Ok(Json.toJson(answer2))
   }
 
   def cSCards(name: String, creditScore: Int):  Future[JsValue] =  {
