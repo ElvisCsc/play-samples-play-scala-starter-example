@@ -14,9 +14,7 @@ class BrowserSpec extends PlaySpec
 
     "work from within a browser" in {
 
-      go to ("http://localhost:" + port)
-
-      pageSource must include ("Your new application is ready.")
+      go to ("http://localhost:9000")
     }
   }
 }
